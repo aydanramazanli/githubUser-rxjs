@@ -1,6 +1,5 @@
-import React from "react";
 
-import Data from "../Data/Data";
+import Data from "./Data";
 import Followers from "./Followers";
 import Details from "./Details";
 const Main = ({
@@ -18,6 +17,7 @@ const Main = ({
   location,
   twitter_username,
   following,
+  repos_url
 }) => (
   <>
     <Data
@@ -29,6 +29,7 @@ const Main = ({
     <div className="container flex items-center justify-between">
     <Followers url={followers_url} />
   <Details url={avatar_url} name={name} company={company} blog={blog} bio={bio} location={location} username={twitter_username} html_url={html_url}/>
+ 
     </div>
    
   </>
