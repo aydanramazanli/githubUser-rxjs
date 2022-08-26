@@ -6,7 +6,6 @@ import Navbar from './Navbar/Navbar';
 import Search from './Home/Search'
 import { createRoot } from 'react-dom/client'
 import './observableConfig';
-
 import './index.css'
 
 
@@ -23,6 +22,7 @@ const App = componentFromStream(prop$ => {
         <Navbar/>
         <Search handler={handler}/>
         <Home user={value} />
+      
 
       </div>
     ))

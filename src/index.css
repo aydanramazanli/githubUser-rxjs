@@ -5,3 +5,17 @@
 body{
     background-color: rgba(241, 245, 249, 0.603);
 }
+.followers{
+    height:290px;
+    overflow: scroll;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
+    gap: 1.25rem 1rem;
+  
+  }
+  
+  .content{
+    width: 1100px;
+    margin:auto;
+  }
+  

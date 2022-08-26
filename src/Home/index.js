@@ -11,7 +11,7 @@ import {
   switchMap
 } from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
-import UserDetail from '../Home/UserDetail';
+import Main from '../Home/Main';
 import Error from '../Error/index'
 
 
@@ -32,7 +32,7 @@ const User = componentFromStream(prop$ => {
         ajax(url).pipe(
           pluck('response'),
           delay(1500),
-          map(UserDetail),
+          map(Main),
           catchError(error => of(<Error {...error} />))
         )
       )
