@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdBusiness, MdLocationOn, MdLink } from "react-icons/md";
+import Data from '../Data/Data';
 const UserDetail = ({
   login,
   avatar_url,
@@ -7,14 +8,16 @@ const UserDetail = ({
   public_repos,
   public_gists,
   followers,
-  followers_url,
   bio,
   html_url,
   company,
   blog,
   location,
   twitter_username,
+  following
 }) =>  (
+  <>
+  <Data repos={ public_repos} gists={ public_gists} followers={followers} following={following} > datas </Data>
   <div className="bg-white  p-6 rounded  relative" style={{width:"49%"}} initial={{x:-100}} animate={{x:0}} transition={{delay:0.5 }}>
   <header className="flex justify-between  items-center">
     <div className="flex items-center">
@@ -42,7 +45,12 @@ const UserDetail = ({
       {blog  || " not find blog"}
     </a>
   </main>
+  <div>
+  </div>
 </div>
+  
+  </>
+  
 
 );
 
