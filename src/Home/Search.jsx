@@ -7,7 +7,7 @@ export default function Search({ handler }) {
         <div>
           <p className="text-center text-red-600 text-lg py-2 font-semibold"></p>
         </div>
-        <div className="flex bg-white  px-3 py-1.5  justify-between rounded w-full" style={{border:'2px solid gray'}}>
+        <div className="flex bg-white  px-3 py-1.5  justify-between rounded w-full">
           <input
             onChange={handler}
             type="text"

@@ -11,8 +11,9 @@ import {
   switchMap
 } from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
-import UserDetail from './/UserDetail';
+import UserDetail from '../Home/UserDetail';
 import Error from '../Error/index'
+
 
 
 const formatUrl = user => `https://api.github.com/users/${user}`;
