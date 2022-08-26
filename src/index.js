@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import { componentFromStream, createEventHandler } from 'recompose';
 import { combineLatest } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import Home from './Home';
+import { createRoot } from 'react-dom/client'
 import './observableConfig';
+import Search from './Home/Search';
 
 
 const App = componentFromStream(prop$ => {
@@ -16,12 +19,12 @@ const App = componentFromStream(prop$ => {
   return combineLatest(prop$, value$).pipe(
     map(([props, value]) => (
       <div>
-        <input onChange={handler} placeholder="GitHub username" />
-      
+        <Search handler={handler}/>
+        <Home user={value} />
       </div>
     ))
   );
 });
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+createRoot(document.getElementById('root')).render(<App/>)
+
